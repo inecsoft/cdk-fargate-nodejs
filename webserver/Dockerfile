@@ -1,5 +1,5 @@
 # build the container
-FROM node:18 as build
+FROM node:20.11 as build
 
 WORKDIR /usr/src/app
 
@@ -9,7 +9,7 @@ RUN npm run build:ts
 RUN npm prune --production
 
 # serving the container
-from node:18 as serve
+from node:20.11 as serve
 
 
 WORKDIR /usr/src/app
